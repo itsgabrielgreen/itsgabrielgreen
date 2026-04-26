@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/itsgabrielgreen/itsgabrielgreen/main/banner.svg" width="100%" alt="Gabriel Green" />
+<img src="https://raw.githubusercontent.com/itsgabrielgreen/itsgabrielgreen/main/banner.png" width="100%" alt="Gabriel Green" />
 
 ---
 
