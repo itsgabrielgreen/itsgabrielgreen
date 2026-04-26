@@ -1,62 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="160" viewBox="0 0 800 160">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200">
 
   <!-- Background -->
-  <rect width="800" height="160" fill="#1DB954"/>
+  <rect width="800" height="200" fill="#1DB954"/>
 
-  <!-- Tiled watermark: GABRIEL GREEN repeated, very subtle -->
-  <g font-family="'Segoe UI', Arial, sans-serif" font-size="52" font-weight="900" fill="#0D0D0D" opacity="0.07">
-    <text x="-20"  y="58">GABRIEL</text>
-    <text x="155"  y="58">GREEN</text>
-    <text x="355"  y="58">GABRIEL</text>
-    <text x="530"  y="58">GREEN</text>
-    <text x="700"  y="58">GABRIEL</text>
-    <text x="-20"  y="120">GREEN</text>
-    <text x="155"  y="120">GABRIEL</text>
-    <text x="355"  y="120">GREEN</text>
-    <text x="530"  y="120">GABRIEL</text>
-    <text x="700"  y="120">GREEN</text>
-  </g>
+  <!--
+    Layout: everything centred horizontally and vertically as one block.
+    Block contents:
+      Row 1: squircle icon (60x60) + "Gabriel Green" (serif 38px) — side by side
+      Row 2: tagline italic (18px)
+    Total block height ≈ 60 (icon/name row) + 14 (gap) + 26 (tagline) = 100px
+    Block top Y = (200 - 100) / 2 = 50
+    Icon+name row baseline: Y = 50 + 46 = 96 (approx midpoint of 60px icon = 80, text baseline ~96)
+    Centre X = 400
+  -->
 
-  <!-- Squircle icon: 52x52 at top-left -->
-  <rect x="20" y="18" width="52" height="52" rx="12" ry="12" fill="#0D0D0D"/>
+  <!-- Squircle icon: 60x60, centred at x=215, y=70 (so right edge at 245) -->
+  <!-- Icon group centred: icon+gap+name total width estimate:
+       60 (icon) + 16 (gap) + ~220 (name at 38px) = ~296px
+       Start x = 400 - 296/2 = 252 → icon x=252, name x=252+60+16=328 -->
+  <rect x="252" y="70" width="60" height="60" rx="14" ry="14" fill="#0D0D0D"/>
 
   <!--
     Waveform bars — vertically centred in icon.
-    Icon centre: x=46, y=44.
-    5 bars, bar_w=5, gap=3 → total=5*5+4*3=37px → start_x=46-18.5=27.5
-    Heights: [0.45*40=18, 0.68*40=27, 1.00*40=40, 0.68*40=27, 0.45*40=18]
-    Bar Y = icon_cy - height/2 = 44 - h/2
+    Icon centre: x=282, y=100.
+    5 bars, bar_w=6, gap=3.5 → total=5*6+4*3.5=44px → start_x=282-22=260
+    Heights (px): [22, 34, 50, 34, 22] centred at y=100 → bar_y = 100 - h/2
   -->
-  <!-- Bar 1 outer: h=18, y=35 -->
-  <rect x="28" y="35" width="5" height="18" rx="2.5" fill="#0d8c3a"/>
-  <!-- Bar 2 inner: h=27, y=30.5 -->
-  <rect x="36" y="31" width="5" height="27" rx="2.5" fill="#13a344"/>
-  <!-- Bar 3 centre: h=40, y=24 -->
-  <rect x="44" y="24" width="5" height="40" rx="2.5" fill="#1DB954"/>
-  <!-- Bar 4 inner: h=27, y=30.5 -->
-  <rect x="52" y="31" width="5" height="27" rx="2.5" fill="#13a344"/>
-  <!-- Bar 5 outer: h=18, y=35 -->
-  <rect x="60" y="35" width="5" height="18" rx="2.5" fill="#0d8c3a"/>
+  <rect x="260" y="89"  width="6" height="22" rx="3" fill="#0d8c3a"/>
+  <rect x="269" y="83"  width="6" height="34" rx="3" fill="#13a344"/>
+  <rect x="278" y="75"  width="6" height="50" rx="3" fill="#1DB954"/>
+  <rect x="287" y="83"  width="6" height="34" rx="3" fill="#13a344"/>
+  <rect x="296" y="89"  width="6" height="22" rx="3" fill="#0d8c3a"/>
 
-  <!-- "Gabriel Green" name — top left beside icon -->
+  <!-- "Gabriel Green" — vertically centred beside icon, baseline at y=107 -->
   <text
-    x="84"
-    y="52"
+    x="328"
+    y="107"
     font-family="Georgia, 'Times New Roman', serif"
-    font-size="22"
+    font-size="38"
     font-weight="700"
     fill="#0D0D0D"
   >Gabriel Green</text>
 
-  <!-- Large centred bold/italic tagline — like LinkedIn banner -->
+  <!-- Tagline — centred below, with comfortable gap -->
   <text
     x="400"
-    y="122"
+    y="152"
     text-anchor="middle"
     font-family="Georgia, 'Times New Roman', serif"
-    font-size="28"
-    font-weight="700"
+    font-size="17"
+    font-style="italic"
     fill="#0D0D0D"
-  >Audio Engineer &amp; <tspan font-style="italic">AI Voice Specialist</tspan></text>
+    opacity="0.8"
+  >Audio Engineer · AI Voice Synthesis · Creative Production Manager</text>
 
 </svg>
