@@ -3,47 +3,60 @@
   <!-- Background -->
   <rect width="800" height="160" fill="#1DB954"/>
 
-  <!-- Dark squircle icon: 100x100 at (30,30) -->
-  <rect x="30" y="30" width="100" height="100" rx="22" ry="22" fill="#0D0D0D"/>
+  <!-- Tiled watermark: GABRIEL GREEN repeated, very subtle -->
+  <g font-family="'Segoe UI', Arial, sans-serif" font-size="52" font-weight="900" fill="#0D0D0D" opacity="0.07">
+    <text x="-20"  y="58">GABRIEL</text>
+    <text x="155"  y="58">GREEN</text>
+    <text x="355"  y="58">GABRIEL</text>
+    <text x="530"  y="58">GREEN</text>
+    <text x="700"  y="58">GABRIEL</text>
+    <text x="-20"  y="120">GREEN</text>
+    <text x="155"  y="120">GABRIEL</text>
+    <text x="355"  y="120">GREEN</text>
+    <text x="530"  y="120">GABRIEL</text>
+    <text x="700"  y="120">GREEN</text>
+  </g>
+
+  <!-- Squircle icon: 52x52 at top-left -->
+  <rect x="20" y="18" width="52" height="52" rx="12" ry="12" fill="#0D0D0D"/>
 
   <!--
-    Waveform bars — vertically centred inside icon.
-    Icon centre Y = 30 + 50 = 80.
-    Bar width = 10px, gap = 5px, 5 bars → total width = 5*10 + 4*5 = 70px.
-    Start X = icon centre (80) - 70/2 = 45.
-    Heights (px): [40, 60, 88, 60, 40] — centred at Y=80.
-    Bar Y = 80 - height/2.
+    Waveform bars — vertically centred in icon.
+    Icon centre: x=46, y=44.
+    5 bars, bar_w=5, gap=3 → total=5*5+4*3=37px → start_x=46-18.5=27.5
+    Heights: [0.45*40=18, 0.68*40=27, 1.00*40=40, 0.68*40=27, 0.45*40=18]
+    Bar Y = icon_cy - height/2 = 44 - h/2
   -->
+  <!-- Bar 1 outer: h=18, y=35 -->
+  <rect x="28" y="35" width="5" height="18" rx="2.5" fill="#0d8c3a"/>
+  <!-- Bar 2 inner: h=27, y=30.5 -->
+  <rect x="36" y="31" width="5" height="27" rx="2.5" fill="#13a344"/>
+  <!-- Bar 3 centre: h=40, y=24 -->
+  <rect x="44" y="24" width="5" height="40" rx="2.5" fill="#1DB954"/>
+  <!-- Bar 4 inner: h=27, y=30.5 -->
+  <rect x="52" y="31" width="5" height="27" rx="2.5" fill="#13a344"/>
+  <!-- Bar 5 outer: h=18, y=35 -->
+  <rect x="60" y="35" width="5" height="18" rx="2.5" fill="#0d8c3a"/>
 
-  <!-- Bar 1 outer left: h=40, y=60 -->
-  <rect x="45" y="60" width="10" height="40" rx="5" ry="5" fill="#0d8c3a"/>
-  <!-- Bar 2 inner left: h=60, y=50 -->
-  <rect x="60" y="50" width="10" height="60" rx="5" ry="5" fill="#13a344"/>
-  <!-- Bar 3 centre tallest: h=88, y=36 -->
-  <rect x="75" y="36" width="10" height="88" rx="5" ry="5" fill="#1DB954"/>
-  <!-- Bar 4 inner right: h=60, y=50 -->
-  <rect x="90" y="50" width="10" height="60" rx="5" ry="5" fill="#13a344"/>
-  <!-- Bar 5 outer right: h=40, y=60 -->
-  <rect x="105" y="60" width="10" height="40" rx="5" ry="5" fill="#0d8c3a"/>
-
-  <!-- Name -->
+  <!-- "Gabriel Green" name — top left beside icon -->
   <text
-    x="156"
-    y="72"
+    x="84"
+    y="52"
     font-family="Georgia, 'Times New Roman', serif"
-    font-size="42"
+    font-size="22"
     font-weight="700"
     fill="#0D0D0D"
   >Gabriel Green</text>
 
-  <!-- Tagline -->
+  <!-- Large centred bold/italic tagline — like LinkedIn banner -->
   <text
-    x="158"
-    y="112"
-    font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
-    font-size="14"
-    font-style="italic"
+    x="400"
+    y="118"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="36"
+    font-weight="700"
     fill="#0D0D0D"
-  >Audio Engineer · AI Voice Synthesis · Creative Production Manager</text>
+  >Audio Engineer &amp; <tspan font-style="italic">AI Voice Specialist</tspan></text>
 
 </svg>
