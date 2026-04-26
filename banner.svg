@@ -1,80 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="160" viewBox="0 0 800 160">
-  <defs>
-    <clipPath id="bannerClip">
-      <rect width="800" height="160" rx="0" ry="0"/>
-    </clipPath>
-  </defs>
 
   <!-- Background -->
   <rect width="800" height="160" fill="#1DB954"/>
 
-  <!-- Tiled watermark text layer (behind everything) -->
-  <g opacity="0.06" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="36" font-weight="700" fill="#0D0D0D" clip-path="url(#bannerClip)">
-    <text x="-60" y="50">GABRIEL GREEN</text>
-    <text x="170" y="50">GABRIEL GREEN</text>
-    <text x="400" y="50">GABRIEL GREEN</text>
-    <text x="630" y="50">GABRIEL GREEN</text>
-    <text x="-60" y="105">GABRIEL GREEN</text>
-    <text x="170" y="105">GABRIEL GREEN</text>
-    <text x="400" y="105">GABRIEL GREEN</text>
-    <text x="630" y="105">GABRIEL GREEN</text>
-    <text x="-60" y="160">GABRIEL GREEN</text>
-    <text x="170" y="160">GABRIEL GREEN</text>
-    <text x="400" y="160">GABRIEL GREEN</text>
-    <text x="630" y="160">GABRIEL GREEN</text>
-  </g>
-
-  <!-- Dark squircle icon background -->
-  <!-- Icon: 100x100, positioned at x=30, y=30 -->
+  <!-- Dark squircle icon: 100x100 at (30,30) -->
   <rect x="30" y="30" width="100" height="100" rx="22" ry="22" fill="#0D0D0D"/>
 
-  <!-- Waveform bars inside icon -->
-  <!-- Icon inner area: x=30..130, y=30..130, centre=(80,80) -->
-  <!-- Bar width: 12px, rx=6 (half width) -->
-  <!-- Bar heights as fraction of icon usable height (80px usable): [0.45, 0.68, 1.00, 0.68, 0.45] -->
-  <!-- Usable height = 72px (leaving 14px top/bottom padding) -->
-  <!-- Heights: 32, 49, 72, 49, 32 -->
-  <!-- 5 bars, gap = 6px, total width = 5*12 + 4*6 = 84px, but icon inner = 72px → adjust: bar=10, gap=4, total=5*10+4*4=66px -->
-  <!-- Centre x of icon = 80, bars start at 80 - 33 = 47 -->
-  <!-- Bar positions (centre x): 52, 66, 80, 94, 108 -->
-  <!-- Usable height zone: y=36 to y=124 (88px), heights: [0.45*88=39.6, 0.68*88=59.8, 1.00*88=88, 0.68*88=59.8, 0.45*88=39.6] -->
-  <!-- Bars are bottom-aligned at y=124 -->
+  <!--
+    Waveform bars — vertically centred inside icon.
+    Icon centre Y = 30 + 50 = 80.
+    Bar width = 10px, gap = 5px, 5 bars → total width = 5*10 + 4*5 = 70px.
+    Start X = icon centre (80) - 70/2 = 45.
+    Heights (px): [40, 60, 88, 60, 40] — centred at Y=80.
+    Bar Y = 80 - height/2.
+  -->
 
-  <!-- Bar 1 (leftmost, outer): height=40, colour #0d8c3a -->
-  <rect x="47" y="84" width="10" height="40" rx="5" ry="5" fill="#0d8c3a"/>
-
-  <!-- Bar 2 (inner left): height=60, colour #13a344 -->
-  <rect x="61" y="64" width="10" height="60" rx="5" ry="5" fill="#13a344"/>
-
-  <!-- Bar 3 (centre, tallest): height=88, colour #1DB954 -->
+  <!-- Bar 1 outer left: h=40, y=60 -->
+  <rect x="45" y="60" width="10" height="40" rx="5" ry="5" fill="#0d8c3a"/>
+  <!-- Bar 2 inner left: h=60, y=50 -->
+  <rect x="60" y="50" width="10" height="60" rx="5" ry="5" fill="#13a344"/>
+  <!-- Bar 3 centre tallest: h=88, y=36 -->
   <rect x="75" y="36" width="10" height="88" rx="5" ry="5" fill="#1DB954"/>
+  <!-- Bar 4 inner right: h=60, y=50 -->
+  <rect x="90" y="50" width="10" height="60" rx="5" ry="5" fill="#13a344"/>
+  <!-- Bar 5 outer right: h=40, y=60 -->
+  <rect x="105" y="60" width="10" height="40" rx="5" ry="5" fill="#0d8c3a"/>
 
-  <!-- Bar 4 (inner right): height=60, colour #13a344 -->
-  <rect x="89" y="64" width="10" height="60" rx="5" ry="5" fill="#13a344"/>
-
-  <!-- Bar 5 (rightmost, outer): height=40, colour #0d8c3a -->
-  <rect x="103" y="84" width="10" height="40" rx="5" ry="5" fill="#0d8c3a"/>
-
-  <!-- Name text -->
+  <!-- Name -->
   <text
     x="156"
-    y="88"
+    y="72"
     font-family="Georgia, 'Times New Roman', serif"
     font-size="42"
     font-weight="700"
     fill="#0D0D0D"
-    dominant-baseline="middle"
   >Gabriel Green</text>
 
-  <!-- Tagline text -->
+  <!-- Tagline -->
   <text
     x="158"
-    y="120"
+    y="112"
     font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
     font-size="14"
     font-style="italic"
     fill="#0D0D0D"
-    dominant-baseline="middle"
   >Audio Engineer · AI Voice Synthesis · Creative Production Manager</text>
 
 </svg>
