@@ -10,11 +10,11 @@ I work at the intersection of audio craft and generative AI, building production
 
 ## What I work on
 
-- **AI voice synthesis pipelines** — prompt engineering, voice selection, output QA, and post-processing for broadcast-quality delivery
-- **Vocal dataset management** — organising, cleaning, and curating voice assets for use in generative AI systems
-- **Dynamic audio personalisation** — scalable systems that adapt audio output to listener, context, or data
-- **DAW production** — mixing, editing, and mastering in Pro Tools and Adobe Audition; composition and sound design in Logic Pro
-- **Voice direction** — working with voice talent and synthetic voices to achieve consistent, intentional performance
+- **AI voice synthesis pipelines:** prompt engineering, voice selection, output QA, and post-processing for broadcast-quality delivery
+- **Vocal dataset management:** organising, cleaning, and curating voice assets for use in generative AI systems
+- **Dynamic audio personalisation:** scalable systems that adapt audio output to listener, context, or data
+- **DAW production:** mixing, editing, and mastering in Pro Tools and Adobe Audition; composition and sound design in Logic Pro
+- **Voice direction:** working with voice talent and synthetic voices to achieve consistent, intentional performance
 
 ---
 
