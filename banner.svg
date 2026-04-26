@@ -51,10 +51,10 @@
   <!-- Large centred bold/italic tagline — like LinkedIn banner -->
   <text
     x="400"
-    y="118"
+    y="122"
     text-anchor="middle"
     font-family="Georgia, 'Times New Roman', serif"
-    font-size="36"
+    font-size="28"
     font-weight="700"
     fill="#0D0D0D"
   >Audio Engineer &amp; <tspan font-style="italic">AI Voice Specialist</tspan></text>
